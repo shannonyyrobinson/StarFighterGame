@@ -34,7 +34,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
         horde = new AlienHorde(16);
         shots = new Bullets();
         
-        ship = new Ship(400, 500, 50, 50, 3);
+        ship = new Ship(400, 500, 75, 75, 3);
         
 
         this.addKeyListener(this);
@@ -104,16 +104,16 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
             if((al.getX()>ship.getX()&&al.getX()<ship.getX()+ship.getWidth())&&(al.getY()<ship.getY()+ship.getHeight()&&al.getY()>ship.getY())){
                 graphToBack.setColor(Color.BLACK);
                 graphToBack.fillRect(0, 0, 800, 600);
-                graphToBack.setColor(Color.RED);
-                graphToBack.drawString("G A M E  O V E R", 300, 300);
+                graphToBack.setColor(Color.BLUE);
+                graphToBack.drawString("G A M E   O V E R", 350, 350);
                 ship.setDead(true);
             }
         }
         if((horde.getList().size())==0){
             graphToBack.setColor(Color.BLACK);
                 graphToBack.fillRect(0, 0, 800, 600);
-                graphToBack.setColor(Color.RED);
-                graphToBack.drawString("GAME OVER: YOU WIN! ", 300, 300);
+                graphToBack.setColor(Color.GREEN);
+                graphToBack.drawString("Y O U   W I N!", 350, 350);
                 ship.setDead(true);
         }
         

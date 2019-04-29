@@ -15,16 +15,16 @@ public class Alien extends MovingThing {
     public String dir = "RIGHT";
 
     public Alien() {
-        this(0, 0, 30, 30, 0);
+        this(0, 0, 40, 40, 0);
     }
 
     public Alien(int x, int y) {
-        this(x,y,30,30,1);
+        this(x,y,40,40,1);
 
     }
 
     public Alien(int x, int y, int s) {
-        this(x,y,30,30,s);
+        this(x,y,40,40,s);
     }
 
     public Alien(int x, int y, int w, int h, int s) {

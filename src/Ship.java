@@ -19,12 +19,10 @@ public class Ship extends MovingThing {
     }
 
     public Ship(int x, int y) {
-        //add code here
         this(x,y,10,10,10);
     }
 
     public Ship(int x, int y, int s) {
-        //add code here
         this(x,y,10,10,s);
     }
 
