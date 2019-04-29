@@ -45,16 +45,15 @@ public abstract class MovingThing implements Moveable {
     }
 
     public void setY(int y) {
-        //add code here
         yPos = y;
     }
 
     public int getX() {
-        return xPos;   //finish this method
+        return xPos;  
     }
 
     public int getY() {
-        return yPos;  //finish this method
+        return yPos;  
     }
 
     public void setWidth(int w) {
@@ -68,11 +67,11 @@ public abstract class MovingThing implements Moveable {
     }
 
     public int getWidth() {
-        return width;  //finish this method
+        return width;  
     }
 
     public int getHeight() {
-        return height;  //finish this method
+        return height;  
     }
 
     public abstract void move(String direction);

@@ -57,7 +57,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
         //that is the exact same width and height as the current screen
         if (back == null) {
             back = (BufferedImage) (createImage(getWidth(), getHeight()));
-        }
+        } 
 
         //create a graphics reference to the back ground image
         //we will draw all changes on the background image
