@@ -16,6 +16,7 @@ public interface Moveable
 	 public void setWidth( int w );
 	 public void setHeight( int h );
 
-    public void setSpeed( int s );
+         public void setSpeed( int s );
 	 public int getSpeed();
 }
+ 
