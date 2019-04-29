@@ -12,7 +12,7 @@ public class Ship extends MovingThing {
 
     private int speed;
     private Image image;
-    private boolean dead = false;
+    private boolean isDead = false;
 
     public Ship() {
         this(10, 10, 10, 10, 10);
@@ -35,27 +35,26 @@ public class Ship extends MovingThing {
             URL url = getClass().getResource("ship.jpg");
             image = ImageIO.read(url);
         } catch (Exception e) {
-            System.out.print("no ship simage");
             //feel free to do something here
         }
     }
 
     public void setSpeed(int s) {
-        //add more code
         speed = s;
     }
-    public void setDead(boolean b){
-        dead = b;
-    }
-    public boolean getDead(){
-        return dead;
-    }
+
     public int getSpeed() {
         return speed;
     }
+    
+    public void setDead(boolean b){
+        isDead = b;
+    }
+    public boolean getDead(){
+        return isDead;
+    }
 
     public void move(String direction) {
-        //add code here
         if(direction.equals("LEFT")&&getX()>0){
             setX(getX()-speed);
         }
@@ -71,7 +70,7 @@ public class Ship extends MovingThing {
     }
 
     public void draw(Graphics window) {
-        if(!dead){
+        if(!isDead){
             window.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
         }
     }

@@ -16,7 +16,9 @@ public class AlienHorde {
     public AlienHorde(int size) {
         int x = 35;
         int row = 1;
+        
         aliens = new ArrayList<Alien>();
+        
         for(int i = 1; i <= size; i++){
             add(new Alien(x,row * 50));
             x+=100;
@@ -59,18 +61,18 @@ public class AlienHorde {
     }
 
     public void removeDeadOnes(List<Ammo> shots) {
-        List<Alien> removeAl = new ArrayList<Alien>();
-        List<Ammo> removeBul = new ArrayList<Ammo>();
+        List<Alien> removeAlien = new ArrayList<Alien>();
+        List<Ammo> removeBullet = new ArrayList<Ammo>();
         for(Ammo a : shots){
             for(Alien al : aliens){
                 if((a.getX()>al.getX()&&a.getX()<al.getX()+al.getWidth())&&(a.getY()<al.getY()+al.getHeight()&&a.getY()>al.getY())){
-                    removeAl.add(al);
-                    removeBul.add(a);
+                    removeAlien.add(al);
+                    removeBullet.add(a);
                 }
             }
         }
-        aliens.removeAll(removeAl);
-        shots.removeAll(removeBul);
+        aliens.removeAll(removeAlien);
+        shots.removeAll(removeBullet);
     }
     
     public List<Alien> getList() {
