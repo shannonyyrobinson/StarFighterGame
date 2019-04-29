@@ -19,13 +19,11 @@ public class Alien extends MovingThing {
     }
 
     public Alien(int x, int y) {
-        //add code here
         this(x,y,30,30,1);
 
     }
 
     public Alien(int x, int y, int s) {
-        //add code here
         this(x,y,30,30,s);
     }
 
@@ -37,12 +35,10 @@ public class Alien extends MovingThing {
             image = ImageIO.read(url);
         } catch (Exception e) {
             //feel free to do something here
-            System.out.print("no alien image");
         }
     }
 
     public void setSpeed(int s) {
-        //add code
         speed = s;
     }
 
@@ -51,7 +47,6 @@ public class Alien extends MovingThing {
     }
 
     public void move(String direction) {
-        //add code here
         if(direction.equals("LEFT")){
             setX(getX()-speed);
         }
